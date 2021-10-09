@@ -1,0 +1,271 @@
+/* GENERAL */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.flex{
+    display: flex;
+}
+.pdl{
+    padding-left: 15px;
+}
+.pdr{
+    padding-right: 15px;
+}
+.received{
+    background-color: #252d30;
+    align-self: flex-start;
+}
+.sent{
+    background-color: #066162;
+    align-self: flex-end;
+}
+.sent, .received{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 18px 45px 18px 18px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+input{
+    background-color: #32373a;
+    border: none;
+    color: #fff;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+::placeholder { 
+  color: #7f8487;
+}
+
+/* STRUTTURA GENERALE */
+#container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1b21;
+    align-items: center;
+    justify-content: center;
+}
+#whatzapp{
+    width: 80%;
+    min-width: 950px;
+    height: 95%;
+}
+#whatzapp::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+#whatzapp-left{
+    width: 35%;
+    height: 100%;
+    float: left;
+    border-right: 1px solid #32373b;
+}
+#whatzapp-left-top{
+    height: 215px;
+    width: 100%;
+}
+#whatzapp-left-bottom{
+    height: calc(100% - 215px);
+    width: 100%;
+    background-color: #1f2428;
+    overflow-y: auto;
+}
+#whatzapp-right-top, #whatzapp-right-bottom{
+    height: 70px;
+    background-color: #1f2428;
+}
+#whatzapp-right-center{
+    height: calc(100% - 140px);
+    background-image: url('./image/image1.png');
+    background-size: cover;
+    overflow-y: auto;
+    flex-direction: column-reverse;
+    padding: 0 60px;
+    position: relative;
+}
+#whatzapp-right-center > div{
+    color: #fff;
+    flex-direction: column;
+}
+
+/* WHATZAPP-LEFT */
+
+/* WHATZAPP-LEFT-TOP-UTENTE */
+#whatzapp-left-top-utente{
+    height: 70px;
+    background-color: #1f2428;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+#whatzapp-left-top-utente > div:first-of-type{
+    align-items: center;
+}
+#whatzapp-left-top-utente > div:first-of-type > div{
+    margin-left: 15px;
+}
+#whatzapp-left-top-utente > div:last-of-type > i{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* WHATZAPP-LEFT-TOP-CENTER */
+#whatzapp-left-top > div:nth-of-type(2){
+    height: 85px;
+    background-color: #085373;
+    align-items: center;
+    color: #fff;
+}
+#whatzapp-left-top > div:nth-of-type(2) > div:first-of-type{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #8eb2be;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #085373;
+    font-size: 20px;
+}
+#whatzapp-left-top > div:nth-of-type(2) > div:nth-of-type(2) > a{
+    color: #8eb2be;
+}
+
+/* WHATZAPP-LEFT-TOP-RICERCA */
+#whatzapp-left-top-ricerca{
+    height: 60px;
+    background-color: #1f2428;
+    align-items: center;
+    justify-content: center;
+}
+#whatzapp-left-top-ricerca > div{
+    width: 95%;
+    height: 70%;
+    border-radius: 20px;
+    background-color: #32373a;
+    align-items: center;
+    padding-left: 24px;
+    cursor: pointer;
+    color: #7f8487;
+}
+#whatzapp-left-top-ricerca > div > input{
+    margin-left: 30px;
+    width: 200px;
+}
+
+/* WHATZAPP-LEFT-BOTTOM */
+#whatzapp-left-bottom{
+    align-items: center;
+}
+#whatzapp-left-bottom > div{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#whatzapp-left-bottom > div > div{
+    display: flex;
+    width: 100%;
+}
+#whatzapp-left-bottom > div > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 50px);
+    padding-left: 15px;
+    cursor: pointer;  
+}
+#whatzapp-left-bottom > div > div > div > div:first-of-type > div:first-of-type{
+    color: #fff;
+}
+#whatzapp-left-bottom > div > div > div > div:first-of-type > div:last-of-type{
+    color: #7c8388;
+    font-size: 14px;
+    padding-top: 5px;
+}
+#whatzapp-left-bottom > div > div > div > div:last-of-type{
+    color: #066162;
+}
+#whatzapp-left-bottom > div:hover{
+    background-color: #32373a;
+}
+
+/* WHATZAPP-RIGHT */
+
+/* WHATZAPP-RIGHT-TOP */
+#whatzapp-right-top{
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+#whatzapp-right-top > div:first-of-type > div{
+    margin-left: 15px;
+    align-self: center;
+}
+#whatzapp-right-top > div:first-of-type > div > div:last-of-type{
+    color: #7c8388;
+}
+#whatzapp-right-top > div:last-of-type > i{
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* WHATZAPP-RIGHT-CENTER */
+#whatzapp-right-center > div > div > div:nth-of-type(2){
+    position: absolute;
+    right: 8px;
+    bottom: 3px;
+    font-size: 11px;
+}
+#whatzapp-right-center > div > div > i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    cursor: pointer;
+}
+#whatzapp-right-center .default-message{
+    color: #bcae8b;
+    background-color: #252d30;
+    position: absolute;
+    width: 500px;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 18px 45px 18px 18px;
+    border-radius: 10px;
+}
+
+/* WHATZAPP-RIGHT-BOTTOM */
+#whatzapp-right-bottom{
+    align-items: center;
+}
+#whatzapp-right-bottom > div:first-of-type, #whatzapp-right-bottom > div:last-of-type{
+    width: 10%;
+    justify-content: center;
+    color:#fff;
+    cursor: pointer;
+}
+#whatzapp-right-bottom > div:nth-of-type(2){
+    width: 80%;
+    height: 70%;
+    background-color: #32373a;
+    border-radius: 30px;
+    align-items: center;
+}
+#whatzapp-right-bottom > div:nth-of-type(2) > input{
+    margin-left: 20px;
+    width: 92%;
+}
